@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Szombath Dominik - Full-stack fejlesztő és szoftvermérnök személyes portfóliója és önéletrajza.">
+  <title>Szombath Dominik | Portfólió & Önéletrajz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Glow & Grid Canvas -->
+  <div class="bg-gradient-canvas" aria-hidden="true">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Kezdőlap">
+        <span class="logo-accent">&lt;</span>DS<span class="logo-accent">/&gt;</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Fő navigáció">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Kezdőlap</a></li>
+          <li><a href="#about" class="nav-link">Rólam</a></li>
+          <li><a href="#experience" class="nav-link">Tapasztalat</a></li>
+          <li><a href="#education" class="nav-link">Tanulmányok</a></li>
+          <li><a href="#skills" class="nav-link">Készségek</a></li>
+          <li><a href="#projects" class="nav-link">Projektek</a></li>
+          <li><a href="#contact" class="nav-link">Kapcsolat</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Téma váltása (világos / sötét)" title="Téma váltása">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary header-cta-desktop">Beszéljünk</a>
+
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Menü megnyitása" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Nyitott új projektekre & lehetőségekre</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Helló, a nevem <br>
+            <span class="gradient-text">Szombath Dominik</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            <span class="typing-text">Full-stack Fejlesztő & Szoftvermérnök</span>
+          </p>
+
+          <p class="hero-description">
+            Modern, reszponzív és felhasználóközpontú digitális élményeket építek letisztult architektúrával, elegáns dizájnnal és magas szintű teljesítménnyel.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Kapcsolatfelvétel</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#experience" class="btn btn-secondary">
+              <span>Tapasztalatok</span>
+            </a>
+            <a href="javascript:void(0)" id="downloadCvBtn" class="btn btn-outline" title="Önéletrajz letöltése (Minta)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>CV Letöltése</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="social-label">Elérhetőségek:</span>
+            <div class="social-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub profil">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn profil">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="mailto:szombath.domi@example.com" class="social-icon" aria-label="Email küldése">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="code-window">
+              <div class="code-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="code-title">developer.config.ts</span>
+              </div>
+              <pre class="code-body"><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">'Szombath Dominik'</span>,
+  <span class="c-prop">role</span>: <span class="c-str">'Full-stack Engineer'</span>,
+  <span class="c-prop">location</span>: <span class="c-str">'Magyarország'</span>,
+  <span class="c-prop">focus</span>: [
+    <span class="c-str">'Modern Web Apps'</span>,
+    <span class="c-str">'Clean Architecture'</span>,
+    <span class="c-str">'Performance & UX'</span>
+  ],
+  <span class="c-prop">availableForHire</span>: <span class="c-bool">true</span>,
+  <span class="c-func">letsBuildTogether</span>: () =&gt; {
+    <span class="c-keyword">return</span> <span class="c-str">'success'</span>;
+  }
+};</code></pre>
+            </div>
+
+            <!-- Floating mini badges -->
+            <div class="floating-badge badge-top">
+              <div class="badge-icon">⚡</div>
+              <div class="badge-text">
+                <strong>3+ év</strong>
+                <span>Tapasztalat</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <div class="badge-icon">🚀</div>
+              <div class="badge-text">
+                <strong>25+ Projekt</strong>
+                <span>Sikeresen átadva</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Bemutatkozás</span>
+          <h2 class="section-title">Ismerj meg közelebbről</h2>
+          <p class="section-subtitle">Szenvedélyem a letisztult kód, a gyors felhasználói felületek és a modern webes technológiák.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <div class="about-avatar-wrapper">
+              <div class="avatar-placeholder">
+                <span class="avatar-initials">DS</span>
+                <div class="avatar-ring"></div>
+              </div>
+            </div>
+            <h3 class="about-name">Szombath Dominik</h3>
+            <p class="about-role">Szoftverfejlesztő & Web Specialista</p>
+            <div class="about-meta-list">
+              <div class="meta-item">
+                <span class="meta-icon">📍</span>
+                <span class="meta-text">Győr / Budapest, Magyarország</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">💼</span>
+                <span class="meta-text">Full-time / Remote / Hibrid</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">✉️</span>
+                <span class="meta-text">kapcsolat@szombathdomi.hu</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-story glass-card">
+            <h3 class="story-title">Történetem & Szemléletem</h3>
+            <p class="story-paragraph">
+              Évek óta foglalkozom modern webalkalmazások tervezésével és fejlesztésével. Célom mindig olyan megoldásokat létrehozni, amelyek nemcsak vizuálisan meggyőzőek és intuitívak, hanem stabil, karbantartható kódalapra épülnek.
+            </p>
+            <p class="story-paragraph">
+              Szeretem a kihívásokat: legyen szó egy komplex adatkezelési folyamat egyszerűsítéséről, API-k tervezéséről vagy pixel-pontos felületek építéséről. Folyamatosan képzem magam a legújabb technológiák terén.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-number" data-target="3">3+</span>
+                <span class="stat-label">Év tapasztalat</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" data-target="25">25+</span>
+                <span class="stat-label">Befejezett projekt</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" data-target="100">100%</span>
+                <span class="stat-label">Elkötelezettség</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Karrier</span>
+          <h2 class="section-title">Szakmai Tapasztalat</h2>
+          <p class="section-subtitle">Ahol eddig értéket teremtettem és technológiai tapasztalatot szereztem.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Senior Full-stack Fejlesztő</h3>
+                  <span class="company-name">ApexTech Solutions Kft.</span>
+                </div>
+                <span class="timeline-badge">2024 - Jelenleg</span>
+              </div>
+              <p class="timeline-description">
+                Vezető szerep vállalati szintű webalkalmazások és SaaS platformok architektúrájának kidolgozásában. Modern React/Next.js frontendek és Node.js mikroszolgáltatások építése.
+              </p>
+              <ul class="timeline-bullets">
+                <li>A fő termék betöltési idejének csökkentése 45%-kal teljesítmény-optimalizálás révén.</li>
+                <li>Újrafelhasználható komponenskönyvtár és dizájnrendszer bevezetése.</li>
+                <li>Junior fejlesztők mentorálása és kód auditálási folyamatok irányítása.</li>
+              </ul>
+              <div class="skill-tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">React / Next.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Frontend Fejlesztő</h3>
+                  <span class="company-name">Digital Craft Studio</span>
+                </div>
+                <span class="timeline-badge">2022 - 2024</span>
+              </div>
+              <p class="timeline-description">
+                Reszponzív, interaktív felhasználói felületek készítése hazai és nemzetközi ügyfelek számára. Szoros együttműködés UX/UI tervezőkkel és a backend csapattal.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Több mint 12 sikeres ügyfélprojekt átadása határidőre és költségkereten belül.</li>
+                <li>REST API integrációk és valós idejű WebSocket adatkapcsolatok kialakítása.</li>
+                <li>Webes akadálymentesítési (a11y) és SEO szabványok maradéktalan érvényesítése.</li>
+              </ul>
+              <div class="skill-tags">
+                <span class="tag">JavaScript (ES6+)</span>
+                <span class="tag">CSS3 / SASS</span>
+                <span class="tag">React</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Junior Webfejlesztő Gyakornok</h3>
+                  <span class="company-name">InnoSphere Labs</span>
+                </div>
+                <span class="timeline-badge">2021 - 2022</span>
+              </div>
+              <p class="timeline-description">
+                Webes landing oldalak, adminisztrációs felületek és belső automatizációs eszközök kódolása.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Reszponzív e-mail sablonok és dinamikus űrlapok fejlesztése.</li>
+                <li>Automatizált tesztek írása és hibajavítások elvégzése.</li>
+              </ul>
+              <div class="skill-tags">
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Git</span>
+                <span class="tag">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Képzettség</span>
+          <h2 class="section-title">Tanulmányok & Minősítések</h2>
+          <p class="section-subtitle">Elméleti alapok és folyamatos szakmai fejlődés.</p>
+        </div>
+
+        <div class="education-grid">
+          <div class="edu-card glass-card">
+            <div class="edu-icon-wrap">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="edu-details">
+              <span class="edu-period">2020 - 2024</span>
+              <h3 class="edu-degree">Mérnökinformatikus BSc</h3>
+              <p class="edu-school">Széchenyi István Egyetem, Győr</p>
+              <p class="edu-description">
+                Főbb szakterületek: Szoftvertechnológia, adatbázis-kezelő rendszerek, algoritmusok és adatszerkezetek, webes architektúrák és hálózati ismeretek.
+              </p>
+            </div>
+          </div>
+
+          <div class="edu-card glass-card">
+            <div class="edu-icon-wrap">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="edu-details">
+              <span class="edu-period">2016 - 2020</span>
+              <h3 class="edu-degree">Műszaki Informatikai Szakgimnázium</h3>
+              <p class="edu-school">Informatikai és Távközlési Szakképző</p>
+              <p class="edu-description">
+                Alapszintű programozás (Python, C++), hálózati konfigurációk (Cisco CCNA modulok), hardveres és operációs rendszer alapok.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Badges -->
+        <div class="certifications-block">
+          <h3 class="cert-title text-center">Szakmai Tanúsítványok</h3>
+          <div class="cert-grid">
+            <div class="cert-card glass-card">
+              <div class="cert-badge">🏅</div>
+              <div class="cert-info">
+                <h4>Meta Certified Front-End Developer</h4>
+                <span>Coursera / Meta • 2023</span>
+              </div>
+            </div>
+            <div class="cert-card glass-card">
+              <div class="cert-badge">☁️</div>
+              <div class="cert-info">
+                <h4>AWS Certified Cloud Practitioner</h4>
+                <span>Amazon Web Services • 2024</span>
+              </div>
+            </div>
+            <div class="cert-card glass-card">
+              <div class="cert-badge">🛡️</div>
+              <div class="cert-info">
+                <h4>JavaScript Algorithms & Data Structures</h4>
+                <span>freeCodeCamp • 2022</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Kompetenciák</span>
+          <h2 class="section-title">Készségek & Eszköztár</h2>
+          <p class="section-subtitle">Gyakorlatban bevált technológiák és munkafolyamatok.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="cat-icon cat-frontend">🎨</div>
+              <div>
+                <h3 class="cat-title">Frontend Fejlesztés</h3>
+                <span class="cat-subtitle">Felhasználói felület & interakció</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-hot">HTML5 / Semantic HTML</span>
+              <span class="chip chip-hot">CSS3 / SASS / Flexbox / Grid</span>
+              <span class="chip chip-hot">JavaScript (ES6+)</span>
+              <span class="chip chip-hot">TypeScript</span>
+              <span class="chip chip-hot">React & Next.js</span>
+              <span class="chip">Responsive Web Design</span>
+              <span class="chip">Tailwind CSS / Vanilla CSS</span>
+              <span class="chip">State Management (Zustand / Redux)</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="cat-icon cat-backend">⚙️</div>
+              <div>
+                <h3 class="cat-title">Backend & Adatbázis</h3>
+                <span class="cat-subtitle">Szerveroldali logika & perzisztencia</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-hot">Node.js / Express</span>
+              <span class="chip chip-hot">RESTful API tervezés</span>
+              <span class="chip">Python</span>
+              <span class="chip chip-hot">PostgreSQL</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">JWT Auth & Biztonság</span>
+              <span class="chip">Prisma / ORM-ek</span>
+            </div>
+          </div>
+
+          <!-- Tools & DevOps -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="cat-icon cat-tools">🛠️</div>
+              <div>
+                <h3 class="cat-title">Eszközök & Módszertan</h3>
+                <span class="cat-subtitle">Munkafolyamatok & minőségbiztosítás</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-hot">Git & GitHub</span>
+              <span class="chip chip-hot">Docker alapismeretek</span>
+              <span class="chip">Vite / Webpack</span>
+              <span class="chip">Figma / UI Prototyping</span>
+              <span class="chip">CI/CD Pipeline-ok</span>
+              <span class="chip">Agile / Scrum módszertan</span>
+              <span class="chip">Postman / API tesztelés</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="cat-icon cat-soft">💡</div>
+              <div>
+                <h3 class="cat-title">Egyéni & Csapatkészségek</h3>
+                <span class="cat-subtitle">Kommunikáció & hatékonyság</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip">Analitikus gondolkodás</span>
+              <span class="chip">Kiváló problémamegoldás</span>
+              <span class="chip">Csapatjátékos szemlélet</span>
+              <span class="chip">Magyar (Anyanyelv)</span>
+              <span class="chip">Angol (Szakmai B2/C1)</span>
+              <span class="chip">Gyors tanulási képesség</span>
+              <span class="chip">Tiszta kód (Clean Code)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Referenciák</span>
+          <h2 class="section-title">Kiemelt Projektek</h2>
+          <p class="section-subtitle">Válogatás a legutóbbi személyes és ügyfélmunkáimból.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card glass-card">
+            <div class="project-preview preview-1">
+              <div class="preview-overlay">
+                <span class="project-type">Full-stack App</span>
+              </div>
+              <div class="mockup-screen">
+                <div class="mockup-bar"><span></span><span></span><span></span></div>
+                <div class="mockup-content">
+                  <div class="mock-header"></div>
+                  <div class="mock-grid">
+                    <div class="mock-box"></div>
+                    <div class="mock-box"></div>
+                    <div class="mock-box"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Nexus E-Commerce Dashboard</h3>
+              <p class="project-text">
+                Átfogó analitikai és rendeléskezelő webalkalmazás valós idejű statisztikákkal, Stripe fizetési integrációval és modern sötét móddal.
+              </p>
+              <div class="project-tags">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>Tailwind</span>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link link-primary">
+                  <span>Projekt megtekintése</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link link-secondary" aria-label="GitHub forráskód">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>Kód</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card">
+            <div class="project-preview preview-2">
+              <div class="preview-overlay">
+                <span class="project-type">Web Alkalmazás</span>
+              </div>
+              <div class="mockup-screen">
+                <div class="mockup-bar"><span></span><span></span><span></span></div>
+                <div class="mockup-content">
+                  <div class="mock-kanban">
+                    <div class="mock-col"></div>
+                    <div class="mock-col"></div>
+                    <div class="mock-col"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">TaskFlow - Intelligens Feladatkezelő</h3>
+              <p class="project-text">
+                Kollaboratív feladatkezelő rendszer valós idejű szinkronizációval, drag-and-drop Kanban táblával és automatikus határidő-értesítésekkel.
+              </p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Socket.io</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link link-primary">
+                  <span>Projekt megtekintése</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link link-secondary" aria-label="GitHub forráskód">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>Kód</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card">
+            <div class="project-preview preview-3">
+              <div class="preview-overlay">
+                <span class="project-type">SaaS Platform</span>
+              </div>
+              <div class="mockup-screen">
+                <div class="mockup-bar"><span></span><span></span><span></span></div>
+                <div class="mockup-content">
+                  <div class="mock-chart-line"></div>
+                  <div class="mock-stats-row">
+                    <div class="mock-chip"></div>
+                    <div class="mock-chip"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">CloudPulse - Rendszermonitoring</h3>
+              <p class="project-text">
+                Mikroszolgáltatások futási állapotát, késleltetését és erőforrás-használatát összegző interaktív műszerfal testreszabható riasztásokkal.
+              </p>
+              <div class="project-tags">
+                <span>Vue.js</span>
+                <span>Go / Python</span>
+                <span>Docker</span>
+                <span>REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link link-primary">
+                  <span>Projekt megtekintése</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link link-secondary" aria-label="GitHub forráskód">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>Kód</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Kapcsolat</span>
+          <h2 class="section-title">Dolgozzunk Együtt!</h2>
+          <p class="section-subtitle">Van egy izgalmas projekted vagy nyitott pozíciód? Keress bizalommal!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Column -->
+          <div class="contact-info-wrap">
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="info-content">
+                <span class="info-label">E-mail cím</span>
+                <a href="mailto:kapcsolat@szombathdomi.hu" class="info-value">kapcsolat@szombathdomi.hu</a>
+                <button class="copy-btn" id="copyEmailBtn" data-email="kapcsolat@szombathdomi.hu" title="E-mail másolása vágólapra">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Másolás</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Telefonszám</span>
+                <a href="tel:+36301234567" class="info-value">+36 30 123 4567</a>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Elhelyezkedés</span>
+                <span class="info-value">Győr / Budapest, Magyarország</span>
+              </div>
+            </div>
+
+            <!-- Availability pill -->
+            <div class="availability-card glass-card">
+              <div class="avail-header">
+                <span class="pulse-indicator"></span>
+                <strong>Aktuális státusz:</strong>
+              </div>
+              <p>Szabad kapacitással rendelkezem új projektekhez, szabadúszó feladatokhoz vagy teljes munkaidős pozícióhoz.</p>
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <div class="contact-form-wrap glass-card">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Teljes név *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Pl. Kovács Péter" required>
+                <span class="form-error" id="nameError">Kérlek, add meg a neved!</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">E-mail cím *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="kovacs.peter@pelda.hu" required>
+                <span class="form-error" id="emailError">Kérlek, érvényes e-mail címet adj meg!</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Téma / Tárgy</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Pl. Weboldal fejlesztés, ajánlatkérés">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Üzenet *</label>
+                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Írd le röviden az elképzelésed vagy a pozíció részleteit..." required></textarea>
+                <span class="form-error" id="messageError">Kérlek, írj egy rövid üzenetet!</span>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                <span class="btn-text">Üzenet elküldése</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <div class="btn-spinner" aria-hidden="true"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-accent">&lt;</span>DS<span class="logo-accent">/&gt;</span>
+        </a>
+        <p class="footer-desc">Szombath Dominik • Full-stack Fejlesztő & Szoftvermérnök</p>
+      </div>
+
+      <div class="footer-center">
+        <p class="copyright">© 2026 Szombath Dominik. Minden jog fenntartva.</p>
+        <p class="footer-built">Készült letisztult, modern HTML, CSS és JavaScript segítségével.</p>
+      </div>
+
+      <div class="footer-right">
+        <button id="backToTop" class="back-to-top" aria-label="Vissza a lap tetejére" title="Vissza az oldal tetejére">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 /**
- * Szombath Dominik - Portfolio & Resume Scripts
+ * Portfólió & Önéletrajz Sablon - JavaScript Funkciók
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -189,29 +189,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (downloadCvBtn) {
     downloadCvBtn.addEventListener('click', () => {
       const cvText = `======================================================
-SZOMBATH DOMINIK - FULL-STACK FEJLESZTŐ & SZOFTVERMÉRNÖK
+VEZETÉKNÉV KERESZTNÉV - FULL-STACK FEJLESZTŐ & SZOFTVERMÉRNÖK
 ======================================================
-E-mail: kapcsolat@szombathdomi.hu | Tel: +36 30 123 4567
-Helyszín: Győr / Budapest, Magyarország
-Weboldal: https://szombathdomi.hu
+E-mail: kapcsolat@domain.hu | Tel: +36 20 000 0000
+Helyszín: Budapest, Magyarország / Remote
+Weboldal: https://pelda-weboldal.hu
 
 SZAKMAI TAPASZTALAT
 -------------------
-• Senior Full-stack Fejlesztő @ ApexTech Solutions Kft. (2024 - Jelenleg)
+• Senior Full-stack Fejlesztő @ Technológiai Vállalat / Cég Neve (2024 - Jelenleg)
   - Vállalati szintű Next.js / TypeScript rendszerek fejlesztése
   - Mikroszolgáltatások és performancia-optimalizálás (45% sebességnövekedés)
 
-• Frontend Fejlesztő @ Digital Craft Studio (2022 - 2024)
+• Frontend Fejlesztő @ Digitális Ügynökség (2022 - 2024)
   - Reszponzív, interaktív UI/UX felületek készítése React és CSS segítségével
   - 12+ sikeres projekt átadása, REST API integrációk
 
-• Junior Webfejlesztő @ InnoSphere Labs (2021 - 2022)
+• Junior Webfejlesztő @ Szoftverfejlesztő Iroda (2021 - 2022)
   - Landing oldalak, belső automatizációk, komponensek fejlesztése
 
 TANULMÁNYOK
 -----------
 • Mérnökinformatikus BSc (2020 - 2024)
-  Széchenyi István Egyetem, Győr
+  Egyetem Neve / Felsőoktatási Intézmény
 • Műszaki Informatikai Szakgimnázium (2016 - 2020)
 
 FŐBB KÉSZSÉGEK
@@ -225,13 +225,13 @@ FŐBB KÉSZSÉGEK
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'Szombath_Dominik_Oneletrajz_Minta.txt';
+      a.download = 'oneletrajz_sablon_minta.txt';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      showToast('Önéletrajz minta letöltve (.txt formátumban)!', 'success');
+      showToast('Önéletrajz minta sablon letöltve (.txt formátumban)!', 'success');
     });
   }
 
@@ -273,7 +273,7 @@ FŐBB KÉSZSÉGEK
       const isMessageValid = validateField(messageInput, messageInput.value.trim().length >= 5);
 
       if (!isNameValid || !isEmailValid || !isMessageValid) {
-        showToast('Kérlek, javítsd a megjelölt mezőket a folytatáshoz!', 'error');
+        showToast('Kérlek, töltsd ki helyesen a megjelölt mezőket!', 'error');
         return;
       }
 
@@ -285,7 +285,7 @@ FŐBB KÉSZSÉGEK
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
         contactForm.reset();
-        showToast('Köszönjük a megkeresést! Az üzeneted sikeresen elküldve.', 'success');
+        showToast('Köszönjük a megkeresést! Az üzenet sikeresen elküldve (szimuláció).', 'success');
       }, 1000);
     });
   }
